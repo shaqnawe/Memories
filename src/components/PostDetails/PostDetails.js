@@ -3,7 +3,7 @@ import { Paper, Typography, CircularProgress, Divider } from '@material-ui/core/
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import { useParams, useNavigate } from 'react-router-dom';
-
+import CommentSection from './CommentSection';
 import { getPost, getPosts } from '../../actions/posts';
 import useStyles from './styles';
 
@@ -66,7 +66,7 @@ const Post = () => {
           </Typography>
           <Divider style={{ margin: "20px 0" }} />
           <Typography variant="body1">
-            <strong>Comments - coming soon!</strong>
+            <CommentSection post={post}/>
           </Typography>
           <Divider style={{ margin: "20px 0" }} />
         </div>
